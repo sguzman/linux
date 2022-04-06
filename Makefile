@@ -426,7 +426,7 @@ KBUILD_HOSTLDLIBS   := $(HOST_LFS_LIBS) $(HOSTLDLIBS)
 # Make variables (CC, etc...)
 CPP		= $(CC) -E
 ifneq ($(LLVM),)
-CC		= clang
+CC		= ~/.cargo/bin/sccache /usr/bin/clang
 LD		= ld.lld
 AR		= llvm-ar
 NM		= llvm-nm
